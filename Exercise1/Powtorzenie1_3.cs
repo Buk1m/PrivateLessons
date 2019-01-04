@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Exercise1
 {
@@ -9,9 +8,7 @@ namespace Exercise1
     {
         private const int Exit = 0;
 
-        // Zakomentuj ostatnia linijkę w funkcji Cwiczenie1
         // Oblicz sume elementów w tablicy 'int[] tab' za pomocą dowolnej pętli
-        // i zwróc wynik z funkcji Cwiczenie1
         public int Cwiczenie1(int[] tab)
         {
             return Exit;
@@ -21,14 +18,13 @@ namespace Exercise1
         // podzielna bez reszty przez 2 i przez 3 i zwróć tablicę wartości true lub false
 
         //Przykład:
-        // tab = [1,6,9]
-        // zwróc [false,true,false]
+        // tab =        [1,    6,   9]
+        //zwróc tablice [false,true,false]
         public bool[] Cwiczenie2(int[] tab)
         {
             return null;
         }
 
-        //Zakomentuj ostatnią linijkę
         //Napisz funkcje ktora przyjmuje jako parametr napis i pojedyncza litere
         //po czym oblicza ile razy ta litera wystpępuje w napisie i zwraca tę wartość
         //Wskazówka:
@@ -39,9 +35,8 @@ namespace Exercise1
         }
 
         //Trudne
-        //Zakomentuj ostatni linijkę w funkjci Cwiczenie4
         //Napisz funkcję, która zwraca najczęściej występujący znak w napisie
-        //wykorzystaj funkcję, którą napisales w Cwiczeniu3 :)
+        //wykorzystaj funkcje, która napisales w Cwiczeniu3 :)
         public char Cwiczenie4(string napis)
         {
             return ' ';
@@ -51,10 +46,7 @@ namespace Exercise1
         //PRACA DOMOWA:
 
         // Połowa
-        // Dla podanego napisu 'string napis' zwroc jego polowę
-        // Przyklad:
-        // napis = "fortnite"
-        // zwróć "fort"
+        // Dla podanego napisu zwroc jego polowę
         public string Cwiczenie5(string napis)
         {
             return null;
@@ -65,7 +57,7 @@ namespace Exercise1
         //Do wypisywania uzyj Console.Write(); zamiast Console.WriteLine();
         public void Cwiczenie6(int[] tab)
         {
-
+        
         }
 
         //wypisz napis podany jako parametr, n razy
@@ -83,18 +75,16 @@ namespace Exercise1
 
         //Miejsce na twoja funkcję
 
-
         //Miejsce na twoją funkcję
         public void Cwiczenie8(int[] a, int[] h)
         {
 
         }
 
-        //Zakomentuj ostatnia linijke w funkcji Cwiczenie9
         //Policz tylko parzyste elementy w tablicy 'int[] tab' i zwroc wynik
         public int Cwiczenie9(int[] tab)
         {
-            return 0;
+            return Exit;
         }
     }
 }

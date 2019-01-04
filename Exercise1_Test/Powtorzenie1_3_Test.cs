@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Exercise1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -109,7 +110,7 @@ namespace Exercise1_Test
                 "Ala ma kota!", "Fortnite", "Boom headshot", "Kartkowka nadchodzi", "I tak nie dasz rady",
                 "muahhahahah"
             };
-            string[] expected = {"Ala ma", "Fort", "Boom h", "Kartkowka", "I tak nie", "muahh" };
+            string[] expected = {"Ala ma", "Fort", "Boom h", "Kartkowka", "I tak nie", "muahh"};
 
             for (int i = 0; i < testStrings.Length; i++)
             {
@@ -136,11 +137,13 @@ namespace Exercise1_Test
                 {
                     pow.Cwiczenie6(testTables[i]);
                     string result = stringWriter.ToString().Trim();
-            
+
                     var sb = stringWriter.GetStringBuilder();
-                    sb.Remove( 0, sb.Length );
-               
-                    Assert.AreEqual(expected[i], result);
+                    sb.Remove(0, sb.Length);
+
+                    Assert.AreEqual(expected[i], result,
+                        "Dla tablicy: [" + string.Join(",", testTables[i].Select(x => x.ToString()).ToArray()) +
+                        "] oczekiwany wynik: \"" + expected[i] + "\", twoj wynik: \"" + result + "\".");
                 }
             }
         }
@@ -150,7 +153,7 @@ namespace Exercise1_Test
         {
             using (StringWriter stringWriter = new StringWriter())
             {
-                Console.SetOut( stringWriter );
+                Console.SetOut(stringWriter);
                 Powtorzenie1_3 pow = new Powtorzenie1_3();
                 string[] testStrings =
                 {
@@ -167,8 +170,10 @@ namespace Exercise1_Test
                     pow.Cwiczenie7(testStrings[i], times[i]);
                     string result = stringWriter.ToString().Trim();
                     var sb = stringWriter.GetStringBuilder();
-                    sb.Remove( 0, sb.Length );
-                    Assert.AreEqual(expected[i], result);
+                    sb.Remove(0, sb.Length);
+                    Assert.AreEqual(expected[i], result,
+                        "Dla napisu: \"" + testStrings[i] +
+                        "\" oczekiwany wynik: \"" + expected[i] + "\", twoj wynik: \"" + result + "\".");
                 }
             }
         }
@@ -178,7 +183,7 @@ namespace Exercise1_Test
         {
             using (StringWriter stringWriter = new StringWriter())
             {
-                Console.SetOut( stringWriter );
+                Console.SetOut(stringWriter);
 
                 Powtorzenie1_3 pow = new Powtorzenie1_3();
 
@@ -191,14 +196,24 @@ namespace Exercise1_Test
 
                 pow.Cwiczenie8(a1, h1);
                 string result = stringWriter.ToString().Trim();
-                Assert.AreEqual( expected1, result );
+                Assert.AreEqual(expected1, result,
+                    "Dla tablicy a: [" + string.Join(",", a1.Select(x => x.ToString()).ToArray()) +
+                    "] oraz tablicy h: [" +
+                    string.Join(",", h1.Select(x => x.ToString()).ToArray()) + "] oczekiwano \"" + expected1 +
+                    "\", twoj wynik: \"" +
+                    result + "\".");
 
                 var sb = stringWriter.GetStringBuilder();
-                sb.Remove( 0, sb.Length );
+                sb.Remove(0, sb.Length);
 
-                pow.Cwiczenie8( a2, h2 );
+                pow.Cwiczenie8(a2, h2);
                 result = stringWriter.ToString().Trim();
-                Assert.AreEqual(expected2, result);
+                Assert.AreEqual(expected2, result,
+                    "Dla tablicy a: [" + string.Join(",", a2.Select(x => x.ToString()).ToArray()) +
+                    "] oraz tablicy h: [" +
+                    string.Join(",", h2.Select(x => x.ToString()).ToArray()) + "] oczekiwano \"" + expected2 +
+                    "\", twoj wynik: \"" +
+                    result + "\".");
             }
         }
 
@@ -217,7 +232,11 @@ namespace Exercise1_Test
             int[] expected = {6, 0, 110, -4};
             for (int i = 0; i < testTables.Count; i++)
             {
-                Assert.AreEqual(expected[i], pow.Cwiczenie9(testTables[i]));
+                var result = pow.Cwiczenie9(testTables[i]);
+                Assert.AreEqual(expected[i], result,
+                "Dla tablicy: [" + string.Join( ",", testTables[ i ].Select( x => x.ToString() ).ToArray() ) +
+                    "] oczekiwany wynik: \"" + expected[ i ] + "\", twoj wynik: \"" + result + "\"." );
+
             }
         }
     }
