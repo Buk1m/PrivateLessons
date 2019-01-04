@@ -27,7 +27,6 @@ namespace Exercise1
          * W cwiczeniu 3 nalezy napisac funkcje porowujaca czy dwie tablice 
          * maja identyczna zawartosc
          */
-
         public bool cwiczenie3( int[] tab, int[] tab2 )
         {
 

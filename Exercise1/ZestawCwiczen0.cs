@@ -10,7 +10,7 @@ namespace Exercise1
     {
         /**
          * Cwiczenia z ponizszego zestawu dotyczyc beda najprostszych czynnosci 
-         * jezyka java jak komentowania kodu, tworzenia zmiennych oraz nadawania im
+         * jezyka C# jak komentowania kodu, tworzenia zmiennych oraz nadawania im
          * okreslonej wartosci lub wykonania prostej operacji
          */
 
@@ -160,7 +160,7 @@ namespace Exercise1
         public int cwiczenie9(double d)
         {
             double doRzutowania = d; //zbedne, ale moze dla czesci Panstwa bedzeimy dzieki temu bedzie latwiej
-            return 0;
+            return (int)d;
         }
 
         /**

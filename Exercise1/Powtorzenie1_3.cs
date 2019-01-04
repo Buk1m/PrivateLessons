@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+
+namespace Exercise1
+{
+    public class Powtorzenie1_3
+    {
+        private const int Exit = 0;
+
+        // Zakomentuj ostatnia linijkę w funkcji Cwiczenie1
+        // Oblicz sume elementów w tablicy 'int[] tab' za pomocą dowolnej pętli
+        // i zwróc wynik z funkcji Cwiczenie1
+        public int Cwiczenie1(int[] tab)
+        {
+            return Exit;
+        }
+
+        // dla kazdego elementu w tablicy 'int[] tab' sprawdz czy jest on liczba
+        // podzielna bez reszty przez 2 i przez 3 i zwróć tablicę wartości true lub false
+
+        //Przykład:
+        // tab = [1,6,9]
+        // zwróc [false,true,false]
+        public bool[] Cwiczenie2(int[] tab)
+        {
+            return null;
+        }
+
+        //Zakomentuj ostatnią linijkę
+        //Napisz funkcje ktora przyjmuje jako parametr napis i pojedyncza litere
+        //po czym oblicza ile razy ta litera wystpępuje w napisie i zwraca tę wartość
+        //Wskazówka:
+        //napis typu string to nic innego jak tablica znakow char[], wykorzystaj petle i warunek if :)
+        public int Cwiczenie3(string napis, char litera)
+        {
+            return Exit;
+        }
+
+        //Trudne
+        //Zakomentuj ostatni linijkę w funkjci Cwiczenie4
+        //Napisz funkcję, która zwraca najczęściej występujący znak w napisie
+        //wykorzystaj funkcję, którą napisales w Cwiczeniu3 :)
+        public char Cwiczenie4(string napis)
+        {
+            return ' ';
+        }
+
+
+        //PRACA DOMOWA:
+
+        // Połowa
+        // Dla podanego napisu 'string napis' zwroc jego polowę
+        // Przyklad:
+        // napis = "fortnite"
+        // zwróć "fort"
+        public string Cwiczenie5(string napis)
+        {
+            return null;
+        }
+
+        //wpisz wszystkie elementy tablicy
+        // WAŻNE !!!!!!
+        //Do wypisywania uzyj Console.Write(); zamiast Console.WriteLine();
+        public void Cwiczenie6(int[] tab)
+        {
+
+        }
+
+        //wypisz napis podany jako parametr, n razy
+        // WAŻNE !!!!!!
+        //Do wypisywania uzyj Console.Write(); zamiast Console.WriteLine();
+        public void Cwiczenie7(string napis, int n)
+        {
+
+        }
+
+
+        //napisz funkcję liczącą pole trójkąta o podanym boku 'int a' i wysokosci 'int h'
+        // i wypisującą wynik na ekranie
+        //a nastepnie wywolaj ją dla wszystkich elementów z tablic a i h
+
+        //Miejsce na twoja funkcję
+
+
+        //Miejsce na twoją funkcję
+        public void Cwiczenie8(int[] a, int[] h)
+        {
+
+        }
+
+        //Zakomentuj ostatnia linijke w funkcji Cwiczenie9
+        //Policz tylko parzyste elementy w tablicy 'int[] tab' i zwroc wynik
+        public int Cwiczenie9(int[] tab)
+        {
+            return 0;
+        }
+    }
+}

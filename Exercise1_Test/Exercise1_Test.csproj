@@ -49,11 +49,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sprawdzian1_Test.cs" />
+    <Compile Include="Powtorzenie1_3_Test.cs" />
     <Compile Include="ZestawCwiczen3_Test.cs" />
     <Compile Include="ZestawCwiczen2_Test.cs" />
     <Compile Include="ZestawCwiczen1_Test.cs" />
     <Compile Include="ZestawCwiczen0_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZestawCwiczen4_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
