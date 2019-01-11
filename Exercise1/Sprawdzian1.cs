@@ -61,10 +61,12 @@ namespace Exercise1
 
         // POLECENIE:
         // funkcja Zadanie3 przyjmuje jako parametry dwie tablice liczb calkowitych
-        // 'int[] A ,int[] B' o rownej liczbie elementow
+        // 'int[] A ,int[] B' o rownej liczbie elementow.
         // napisz funkcję o nazwie UtworzPorownanie(int[] A ,int[] B), 
         // która porównuje kolejne elementy tablic A i B oraz zapisuje wynik w stringu C
-        // jesli element tablicy A jest mniejszy od B to string powininen zawierac 
+        // jesli element tablicy A jest mniejszy od B to string powininen zawierac "<"
+        // jeżeli element tablicy A jest wiekszy od B to string powinien zawierac "<"
+        // jeżeli elementy sa równe to string powinien zawierac "="
         // użyj instrukcji if lub switch
 
 
@@ -72,10 +74,11 @@ namespace Exercise1
         // Dla podanych tablic tabA i tabB
         // bA = [1,2,3];
         // bB = [1,1,4];
-        // C = "=<>"
+        // string wynik -> C = "=<>"
         // ponieważ 1 jest rowne 1 -> "="
         // ponieważ 2 jest wieksze od 1 -> ">"
         // ponieważ 3 jest mniejsze od 4 -> "<"
+        // razem "=<>"
 
         public string Zadanie3(int[] A, int[] B)
         {
