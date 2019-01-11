@@ -160,7 +160,7 @@ namespace Exercise1
         public int cwiczenie9(double d)
         {
             double doRzutowania = d; //zbedne, ale moze dla czesci Panstwa bedzeimy dzieki temu bedzie latwiej
-            return (int)d;
+            return 0;
         }
 
         /**
