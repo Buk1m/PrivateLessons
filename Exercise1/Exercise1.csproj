@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Powtorzenie1_3.cs" />
+    <Compile Include="ZestawPowtorzeniowy1.cs" />
+    <Compile Include="ZestawPowtorzeniowy2.cs" />
     <Compile Include="Sprawdzian1.cs" />
     <Compile Include="ZestawCwiczen0.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

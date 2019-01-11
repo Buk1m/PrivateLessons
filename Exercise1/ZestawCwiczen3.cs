@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Exercise1
 {
@@ -29,8 +30,9 @@ namespace Exercise1
          */
         public bool cwiczenie3( int[] tab, int[] tab2 )
         {
-
-            return true;
+            
+            return tab.SequenceEqual( tab2 );
+            
         }
     }
 }

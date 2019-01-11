@@ -8,12 +8,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Exercise1_Test
 {
     [TestClass]
-    public class Powtorzenie1_3_Test
+    public class ZestawPowtorzeniowy1_Test
     {
         [TestMethod]
         public void Cwiczenie1Test()
         {
-            Powtorzenie1_3 pow = new Powtorzenie1_3();
+            ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
             List<List<int>> testTables = new List<List<int>>
             {
                 new List<int> {1, 2, 3, 4, 5},
@@ -32,7 +32,7 @@ namespace Exercise1_Test
         [TestMethod]
         public void Cwiczenie2Test()
         {
-            Powtorzenie1_3 pow = new Powtorzenie1_3();
+            ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
             List<List<int>> testTables = new List<List<int>>
             {
                 new List<int> {1, 2, 3, 4, 5},
@@ -66,7 +66,7 @@ namespace Exercise1_Test
         [TestMethod]
         public void Cwiczenie3Test()
         {
-            Powtorzenie1_3 pow = new Powtorzenie1_3();
+            ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
             string[] testStrings =
             {
                 "Ala ma kota!", "Fortnite", "Boom headshot", "Kartkowka nadchodzi", "I tak nie dasz rady",
@@ -86,7 +86,7 @@ namespace Exercise1_Test
         [TestMethod]
         public void Cwiczenie4Test()
         {
-            Powtorzenie1_3 pow = new Powtorzenie1_3();
+            ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
             string[] testStrings =
             {
                 "Ala ma kota!", "Fortnite", "Boom headshot", "Kartkowka nadchodzi", "I tak nie dasz rady",
@@ -104,7 +104,7 @@ namespace Exercise1_Test
         [TestMethod]
         public void Cwiczenie5Test()
         {
-            Powtorzenie1_3 pow = new Powtorzenie1_3();
+            ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
             string[] testStrings =
             {
                 "Ala ma kota!", "Fortnite", "Boom headshot", "Kartkowka nadchodzi", "I tak nie dasz rady",
@@ -124,7 +124,7 @@ namespace Exercise1_Test
             using (StringWriter stringWriter = new StringWriter())
             {
                 Console.SetOut(stringWriter);
-                Powtorzenie1_3 pow = new Powtorzenie1_3();
+                ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
                 List<int[]> testTables = new List<int[]>
                 {
                     new[] {1, 2, 3, 4, 5},
@@ -154,7 +154,7 @@ namespace Exercise1_Test
             using (StringWriter stringWriter = new StringWriter())
             {
                 Console.SetOut(stringWriter);
-                Powtorzenie1_3 pow = new Powtorzenie1_3();
+                ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
                 string[] testStrings =
                 {
                     "Fortnite", "Boom", "Kartkowka", "muahhahahah"
@@ -185,7 +185,7 @@ namespace Exercise1_Test
             {
                 Console.SetOut(stringWriter);
 
-                Powtorzenie1_3 pow = new Powtorzenie1_3();
+                ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
 
                 int[] a1 = {1, 2, 3, 4, 5};
                 int[] a2 = {2, 3, 4, 5, 0};
@@ -221,7 +221,7 @@ namespace Exercise1_Test
         [TestMethod]
         public void Cwiczenie9Test()
         {
-            Powtorzenie1_3 pow = new Powtorzenie1_3();
+            ZestawPowtorzeniowy1 pow = new ZestawPowtorzeniowy1();
             List<int[]> testTables = new List<int[]>
             {
                 new[] {1, 2, 3, 4, 5},

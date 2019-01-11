@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Exercise1
 {
-    public class Powtorzenie1_3
+    public class ZestawPowtorzeniowy1
     {
         private const int Exit = 0;
 
