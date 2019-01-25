@@ -30,7 +30,7 @@ namespace Exercise1
         // zwróć napis "parzysta"
         public string Zadanie1(int[] tablica)
         {
-            return null;
+            return tablica.Sum() % 2 == 0 ? "parzysta" : "nieparzysta";
         }
 
         // ZADANIE 2: Prawie dobry kalkulator
@@ -52,6 +52,17 @@ namespace Exercise1
         // Wykorzystaj instrukcje if..else lub switch case
         public float Zadanie2(float a, float b, string operacja)
         {
+            switch (operacja)
+            {
+                case "dodaj": return a + b;
+                case "odejmij": return a - b;
+                case "pomnoz": return a * b;
+                case "podziel":
+                    if (b == 0.0f) return 0;
+                    return a / b;
+                case "modulo": return a % b;
+            }
+
             return Exit;
         }
 
@@ -82,15 +93,29 @@ namespace Exercise1
 
         public string Zadanie3(int[] A, int[] B)
         {
-            //return UtworzPorownanie(A, B);
-            return null;
+            return UtworzPorownanie(A, B);
+//            return null;
         }
 
         //Miejsce na twoją funkcje
+        public string UtworzPorownanie(int[] A, int[] B)
+        {
+            string c = "";
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (A[i] > B[i])
+                {
+                    c += ">";
+                }
+                else if (A[i] < B[i])
+                {
+                    c += "<";
+                }
+                else c += "=";
+            }
 
-
-
-
+            return c;
+        }
 
         //Miejsce na twoją funkcje
     }

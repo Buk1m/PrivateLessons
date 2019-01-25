@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Sprawdzian1_Test.cs" />
+    <Compile Include="StringCwiczenia_Test.cs" />
     <Compile Include="ZestawPowtorzeniowy2_Test.cs" />
     <Compile Include="ZestawPowtorzeniowy1_Test.cs" />
     <Compile Include="ZestawCwiczen3_Test.cs" />
