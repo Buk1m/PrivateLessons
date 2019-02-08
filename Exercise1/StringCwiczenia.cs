@@ -71,7 +71,8 @@ namespace Exercise1
         // wykorzystaj do tego metode "Remove" klasy string
         public string Cwiczenie6(string napis, int poczatekUsuwania, int liczbaZnakowDoUsuniecia)
         {
-            return null;
+            
+            return napis.Remove(poczatekUsuwania, liczbaZnakowDoUsuniecia);
         }
 
 
