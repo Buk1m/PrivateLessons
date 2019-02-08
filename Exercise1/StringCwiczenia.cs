@@ -81,7 +81,7 @@ namespace Exercise1
         // programista nie musisz zmieniać nazw ręcznie, wykorzystaj do tego metode "Replace" klasy string
         public string Cwiczenie7(string napis, string doZmiany, string nowy)
         {
-            return null;
+            return napis.Replace(doZmiany,nowy);
         }
 
         // uzupełnij metode Podsumowanie tak aby z podanej tablicy nazw plików wybierała tylko nazwy spełniające warunek:
