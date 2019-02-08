@@ -4,6 +4,15 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace Exercise1
 {
+
+    class Wojownik
+    {
+        public void Atakuj()
+        {
+
+        }
+    }
+
     public class StringCwiczenia
     {
         //Działania na stringach
@@ -15,25 +24,23 @@ namespace Exercise1
         // na podobnej zasadzie działa paski wyszukiwania, np jak ten w windowsie do wyszukiwania plików
         public bool Cwiczenie1(string igla, string stogSiana)
         {
-            return stogSiana.Contains(igla);
+            return stogSiana.Contains(igla) ;
         }
 
         // Ćwiczenie2 - z podanej jako parametr listy stringów "pliki", wybierz tylko te,
         // które kończą się na podane rozszerzenie np. "jpg"
         // wykorzystaj metode klasy string "EndsWith"
-        // metoda zwraca true jeżeli napis na którym jest wywolywana kończy się na napis podany jako parametr
         public List<string> Cwiczenie2(List<string> pliki, string rozszerzenie)
         {
-            List<string> zdjecia = new List<string>();
-            foreach (var plik in pliki)
+            List<string> vs = new List<string>(); 
+            for (int i = 0; i < pliki.Count; i++)
             {
-                if (plik.EndsWith(rozszerzenie))
+               if(pliki[i].EndsWith(rozszerzenie) == true)
                 {
-                    zdjecia.Add(plik);
+                    vs.Add(pliki[i]);
                 }
             }
-
-            return zdjecia;
+            return vs;
         }
 
 
@@ -48,30 +55,32 @@ namespace Exercise1
         // wykorzystaj do tego metode klasy String "Insert"
         public string Cwiczenie4(string napis, string dodatek)
         {
-            return napis.Insert(20, dodatek);
+
+
+            return napis.Insert(20,dodatek);
         }
 
         // Cwiczenie5 - znajdz ostatnie wystąpienie podanej litery w napisie
         // wykorzystaj do tego metode LastIndexOf klasy string
         public int Cwiczenie5(string napis, char litera)
         {
-            return napis.LastIndexOf(litera);
+            return napis.LastIndexOf(litera) ;
         }
 
         // Cwiczenie6 - usun z podanego napisu, "liczbaZnakowDoUsuniecia" znaków zaczynając od indeksu "poczatekUsuwania" 
         // wykorzystaj do tego metode "Remove" klasy string
         public string Cwiczenie6(string napis, int poczatekUsuwania, int liczbaZnakowDoUsuniecia)
         {
-            return napis.Remove(poczatekUsuwania, liczbaZnakowDoUsuniecia);
+            return null;
         }
 
 
         // Cwiczenie7 - zamien w podanym napisie wszyskie wystąpienia napisu "doZmiany" na napis "nowy"
         // wyobraź sobie, że w nazwie projektu który ma 10000 plików jest literówka, na szczęscie jako
         // programista nie musisz zmieniać nazw ręcznie, wykorzystaj do tego metode "Replace" klasy string
-        public string Cwiczenie6(string napis, string doZmiany, string nowy)
+        public string Cwiczenie7(string napis, string doZmiany, string nowy)
         {
-            return napis.Replace(doZmiany, nowy);
+            return null;
         }
 
         // uzupełnij metode Podsumowanie tak aby z podanej tablicy nazw plików wybierała tylko nazwy spełniające warunek:
@@ -86,7 +95,7 @@ namespace Exercise1
         {
         }
 
-        // Na przyjęciu zlocie Kowalskich który organizowałeś jeden z uczestników popełnił przestępstwo i ukradł kasetke z pieniędzmi.
+        // Na zlocie Kowalskich który organizowałeś jeden z uczestników popełnił przestępstwo i ukradł kasetke z pieniędzmi.
         // Policja na miejscu zdarzenia odnalazła przedarte zaproszenie z widocznym nazwiskiem Kowalski i godziną 21.
         // Detektyw prosi cię  o podanie listy wszystkich uczestników przyjęcia o nazwisku "Kowalski" lub "Kowalska"
         // którzy przybyli na przyjęcie pomiedzy 21 a 22
@@ -106,20 +115,7 @@ namespace Exercise1
         // Czy dasz rade odnaleźć złodzieja?
         public List<string> PracaDomowa(List<string> listaGosci)
         {
-            List<string> podejrzani = new List<string>();
-            foreach (string s in listaGosci)
-            {
-                string temp;
-                temp = s.Remove(0, s.IndexOf('.')+1);
-                temp = temp.Remove(temp.IndexOf(':'), 3 );
-                if (temp.Contains("21") && (temp.Contains("Kowalski") || temp.Contains("Kowalska")))
-                {
-                    podejrzani.Add(s);
-                }
-
-            }
-
-            return podejrzani;
+            return null;
         }
 
 
@@ -127,21 +123,20 @@ namespace Exercise1
         // wykorzystaj metode klasy string "Equals" a do zamiany liter na wielkie lub male użyj metody "ToLower" lub "ToUpper"
         public bool Cwiczenie8(string napis1, string napis2)
         {
-            return napis1.ToLower().Equals(napis2.ToLower());
+            return false;
         }
 
 
         //Cwiczenie9 - Podziel podany jako parametr napis według podanego jako parametr znaku "separator"
         public string[] Cwiczenie9(string napis, char separator)
         {
-            string[] podzielony = napis.Split(separator);
-            return podzielony;
+            return null;
         }
 
         // Cwiczenie 10 - z podanego jako parametr napisu wyciągnij napis zaczynający się na indeksie "poczatek" i mający długość "dlugosc"
         public string Cwiczenie10(string napis, int poczatek, int dlugosc)
         {
-            return napis.Substring(poczatek, dlugosc);
+            return null;
         }
 
 
@@ -151,9 +146,7 @@ namespace Exercise1
         // Podziel je według znaku ";" i usuń część zawierającą "Imie:", tak aby zostały same imiona
         public string[] PracaDomowa2(string imiona)
         {
-            imiona = imiona.Replace("Imie:", "");
-            string[] test = imiona.Split(';');
-            return test;
+            return null;
         }
     }
 }
