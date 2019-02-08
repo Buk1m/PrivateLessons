@@ -92,8 +92,27 @@ namespace Exercise1
         // 5. usuń wszystkie ewentualne spacje ' '
         // 6. zamien wszystkie ',' na '-'
         // 7. zwróc z metody Podsumowanie listę napisów spełniających powyższe warunki
-        public void Podsumowanie1(List<string> nazwyPlikow)
+        public List<string> Podsumowanie1(List<string> nazwyPlikow)
         {
+            int liczbaznakow=0;
+            string plik1;
+            List<string> pliki = new List<string>();
+            foreach(string plik in nazwyPlikow)
+            {
+                if (plik.Contains("Prezentacja"))
+                {
+                    if (plik.EndsWith(".pttx"))
+                    {
+                        liczbaznakow = plik.IndexOf('_');
+                       plik1=plik.Insert(liczbaznakow, "2019");
+                       plik1=plik1.Replace(" ","");
+                        plik1=plik1.Replace(',', '-');
+                        pliki.Add(plik1);
+                    }
+                }
+            }
+
+            return pliki;
         }
 
         // Na zlocie Kowalskich który organizowałeś jeden z uczestników popełnił przestępstwo i ukradł kasetke z pieniędzmi.
