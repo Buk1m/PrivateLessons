@@ -69,7 +69,7 @@ namespace Exercise1
         // Cwiczenie7 - zamien w podanym napisie wszyskie wystąpienia napisu "doZmiany" na napis "nowy"
         // wyobraź sobie, że w nazwie projektu który ma 10000 plików jest literówka, na szczęscie jako
         // programista nie musisz zmieniać nazw ręcznie, wykorzystaj do tego metode "Replace" klasy string
-        public string Cwiczenie6(string napis, string doZmiany, string nowy)
+        public string Cwiczenie7(string napis, string doZmiany, string nowy)
         {
             return napis.Replace(doZmiany, nowy);
         }
@@ -82,8 +82,28 @@ namespace Exercise1
         // 5. usuń wszystkie ewentualne spacje ' '
         // 6. zamien wszystkie ',' na '-'
         // 7. zwróc z metody Podsumowanie listę napisów spełniających powyższe warunki
-        public void Podsumowanie1(List<string> nazwyPlikow)
+        public List<string> Podsumowanie1(List<string> nazwyPlikow)
         {
+            int liczbaznakow = 0;
+            string plik1;
+            List<string> pliki = new List<string>();
+            foreach (string plik in nazwyPlikow)
+            {
+                if (plik.Contains("Prezentacja"))
+                {
+                    if (plik.EndsWith(".pttx"))
+                    {
+                        liczbaznakow = plik.IndexOf('_');
+                        plik1 = plik.Insert(liczbaznakow+1, "2019");
+                        plik1 = plik1.Replace(" ", "");
+                        plik1 = plik1.Replace(',', '-');
+                        pliki.Add(plik1);
+                    }
+
+                }
+            }
+
+            return pliki;
         }
 
         // Na przyjęciu zlocie Kowalskich który organizowałeś jeden z uczestników popełnił przestępstwo i ukradł kasetke z pieniędzmi.
