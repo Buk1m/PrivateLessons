@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Exercise1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -80,18 +80,66 @@ namespace Exercise1_Test
             Assert.AreEqual(13, sc.Cwiczenie5(napis1, 't'));
             Assert.AreEqual(3, sc.Cwiczenie5(napis2, 'q'));
         }
-        //        public void Cwiczenie6Test()
-        //        {
-        //            string napis1 = "aaaaaaaaaaaaaaaaaaaaaaaaaa";
-        //            string napis2 = "bbbbbbbbbbbbbbbbbbbbbbbbbb";
-        //            string expected1 = "aaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaa";
-        //            string expected2 = "bbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbb";
-        //
-        //            StringCwiczenia sc = new StringCwiczenia();
-        //            Assert.AreEqual(expected1, sc.Cwiczenie4(napis1, napis2));
-        //            Assert.AreEqual(expected2, sc.Cwiczenie4(napis2, napis1));
-        //
-        //        }
+
+        [TestMethod]
+        public void Cwiczenie6Test()
+        {
+            string napis1 = "aaaaaaaaaaaaaaaaaaaaaaaaaa";
+            string napis2 = "bbbbbbbbbbbbbbbbbbbbbbbbbb";
+            string expected1 = "aaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaa";
+            string expected2 = "bbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbb";
+
+            StringCwiczenia sc = new StringCwiczenia();
+            Assert.AreEqual(expected1, sc.Cwiczenie4(napis1, napis2));
+            Assert.AreEqual(expected2, sc.Cwiczenie4(napis2, napis1));
+        }
+
+        [TestMethod]
+        public void Cwiczenie7Test()
+        {
+            string napis1 = "a a a";
+            string napis2 = "b b b b b";
+            string expected1 = "aaa";
+            string expected2 = "bbbbb";
+
+            StringCwiczenia sc = new StringCwiczenia();
+            Assert.AreEqual(expected1, sc.Cwiczenie7(napis1, " ", ""));
+            Assert.AreEqual(expected2, sc.Cwiczenie7(napis2, " ", ""));
+        }
+
+        [TestMethod]
+        public void Podsumowanie1Test()
+        {
+            StringCwiczenia sc = new StringCwiczenia();
+            List<string> fileList1 = new List<string>
+            {
+                "Prezentacja_Bartosz_Programista,Programowanie wielordzeniowe.pttx",
+                "Creiziol",
+                "Prezentacja_Franek_Czeladnik, nauka programowania.pttx",
+                "Szybki list skoczyl nad leniwym psem"
+            };
+            List<string> expected1 = new List<string>
+            {
+                "Prezentacja_2019Bartosz_Programista-Programowaniewielordzeniowe.pttx",
+                "Prezentacja_2019Franek_Czeladnik-naukaprogramowania.pttx",
+            };
+            List<string> fileList2 = new List<string>
+            {
+                "Prezentacja_Franek_Czeladnik, nauka programowania.pttx",
+                "Prezentacja_Bartosz_Programista,Programowanie wielordzeniowe.pttx",
+                "Creiziol",
+                "Szybki list skoczyl nad leniwym psem"
+            };
+            List<string> expected2 = new List<string>
+            {
+                "Prezentacja_2019Franek_Czeladnik-naukaprogramowania.pttx",
+                "Prezentacja_2019Bartosz_Programista-Programowaniewielordzeniowe.pttx",
+            };
+            var test = sc.Podsumowanie1(fileList1);
+            //TODO: add meaningful msg
+            Assert.IsTrue(test.SequenceEqual(expected1));
+            Assert.IsTrue(sc.Podsumowanie1(fileList2).SequenceEqual(expected2));
+        }
 
         [TestMethod]
         public void PracaDomowaTest()
@@ -122,6 +170,44 @@ namespace Exercise1_Test
 
             Assert.AreEqual(4, sc.PracaDomowa(listaGosci1).Count);
             Assert.AreEqual(3, sc.PracaDomowa(listaGosci2).Count);
+        }
+
+        [TestMethod]
+        public void Cwiczenie8Test()
+        {
+            string napis1 = "aAA";
+            string napis2 = "The Quick Brown FOX";
+            string expected1 = "aaa";
+            string expected2 = "The Quick Brown FOX";
+            StringCwiczenia sc = new StringCwiczenia();
+            Assert.IsTrue(sc.Cwiczenie8(napis1, expected1));
+            Assert.IsTrue(sc.Cwiczenie8(napis2, expected2));
+        }
+
+
+        [TestMethod]
+        public void Cwiczenie9Test()
+        {
+            StringCwiczenia sc = new StringCwiczenia();
+            string napis1 = "a,b,c,d";
+            string[] expected1 = new[] {"a", "b", "c", "d"};
+            string napis2 = "a;b;c;d;e";
+            string[] expected2 = new[] {"a", "b", "c", "d", "e"};
+            //TODO: add msg
+            Assert.IsTrue(sc.Cwiczenie9(napis1, ',').SequenceEqual(expected1));
+            Assert.IsTrue(sc.Cwiczenie9(napis2, ';').SequenceEqual(expected2) );
+        }
+
+        [TestMethod]
+        public void Cwiczenie10Test()
+        {
+            string napis1 = "test1";
+            string napis2 = "wololole";
+            string expected1 = "te";
+            string expected2 = "lole";
+            StringCwiczenia sc = new StringCwiczenia();
+            Assert.AreEqual(expected1,sc.Cwiczenie10(napis1,0,2));
+            Assert.AreEqual(expected2,sc.Cwiczenie10(napis1,4,4));
         }
 
         [TestMethod]
