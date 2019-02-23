@@ -135,7 +135,21 @@ namespace Exercise1
         // Czy dasz rade odnaleźć złodzieja?
         public List<string> PracaDomowa(List<string> listaGosci)
         {
-            return null;
+            List<string> podejrzani = new List<string>();
+            for(int i = 0; i < listaGosci.Count; i++)
+            {
+                listaGosci[i] = listaGosci[i].Remove(0,listaGosci[i].IndexOf('.'));
+                listaGosci[i] = listaGosci[i].Remove(listaGosci[i].IndexOf(':'));
+                if (listaGosci[i].Contains("21")&&(listaGosci[i].Contains("Kowalski") || listaGosci[i].Contains("Kowalska")))
+                    
+                {
+                    podejrzani.Add(listaGosci[i]);
+
+                }
+
+            }
+            
+            return podejrzani;
         }
 
 
@@ -143,20 +157,29 @@ namespace Exercise1
         // wykorzystaj metode klasy string "Equals" a do zamiany liter na wielkie lub male użyj metody "ToLower" lub "ToUpper"
         public bool Cwiczenie8(string napis1, string napis2)
         {
-            return false;
+            if (napis1.ToLower() == napis2.ToLower())
+            {
+                return true;
+            }
+
+                return false;
+            
+            
         }
 
 
         //Cwiczenie9 - Podziel podany jako parametr napis według podanego jako parametr znaku "separator"
         public string[] Cwiczenie9(string napis, char separator)
         {
-            return null;
+
+            return napis.Split(separator);
         }
 
         // Cwiczenie 10 - z podanego jako parametr napisu wyciągnij napis zaczynający się na indeksie "poczatek" i mający długość "dlugosc"
         public string Cwiczenie10(string napis, int poczatek, int dlugosc)
         {
-            return null;
+            
+            return napis.Substring(poczatek, dlugosc);
         }
 
 
@@ -166,7 +189,11 @@ namespace Exercise1
         // Podziel je według znaku ";" i usuń część zawierającą "Imie:", tak aby zostały same imiona
         public string[] PracaDomowa2(string imiona)
         {
-            return null;
+            imiona=imiona.Replace("Imie:", "");
+            string[] imie= imiona.Split(';');
+
+
+            return imiona.Split(';');
         }
     }
 }
